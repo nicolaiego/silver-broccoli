@@ -52,38 +52,38 @@ for store_id, products in inventory_data.items():
 
 
 
-import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+# import gspread
+# from oauth2client.service_account import ServiceAccountCredentials
 
-# Define the scope and credentials to access the Google Sheets API
-SCOPE = ['https://www.googleapis.com/auth/spreadsheets']
-SERVICE_ACCOUNT_FILE = '/path/to/service_account.json'
-creds = ServiceAccountCredentials.from_json_keyfile_name(SERVICE_ACCOUNT_FILE, SCOPE)
+# # Define the scope and credentials to access the Google Sheets API
+# SCOPE = ['https://www.googleapis.com/auth/spreadsheets']
+# SERVICE_ACCOUNT_FILE = '/path/to/service_account.json'
+# creds = ServiceAccountCredentials.from_json_keyfile_name(SERVICE_ACCOUNT_FILE, SCOPE)
 
-# Define the ID of the Google Sheet to write data to
-SHEET_ID = 'your-sheet-id-here'
+# # Define the ID of the Google Sheet to write data to
+# SHEET_ID = 'your-sheet-id-here'
 
-# Create a client to interact with the Google Sheets API
-client = gspread.authorize(creds)
+# # Create a client to interact with the Google Sheets API
+# client = gspread.authorize(creds)
 
-# Open the sheet and select the first worksheet
-sheet = client.open_by_key(SHEET_ID).sheet1
+# # Open the sheet and select the first worksheet
+# sheet = client.open_by_key(SHEET_ID).sheet1
 
-# Define the metrics to write to the sheet
-inventory_accuracy_rate = 0.95
-stockout_rate = 0.05
-daily_avg_time = '00:25:00'
-weekly_avg_time = '00:30:00'
-monthly_avg_time = '00:35:00'
+# # Define the metrics to write to the sheet
+# inventory_accuracy_rate = 0.95
+# stockout_rate = 0.05
+# daily_avg_time = '00:25:00'
+# weekly_avg_time = '00:30:00'
+# monthly_avg_time = '00:35:00'
 
-# Define the data to write to the sheet
-data = [
-    ['Inventory Accuracy Rate', inventory_accuracy_rate],
-    ['Stockout Rate', stockout_rate],
-    ['Daily Avg. Time to Do Inventory', daily_avg_time],
-    ['Weekly Avg. Time to Do Inventory', weekly_avg_time],
-    ['Monthly Avg. Time to Do Inventory', monthly_avg_time]
-]
+# # Define the data to write to the sheet
+# data = [
+#     ['Inventory Accuracy Rate', inventory_accuracy_rate],
+#     ['Stockout Rate', stockout_rate],
+#     ['Daily Avg. Time to Do Inventory', daily_avg_time],
+#     ['Weekly Avg. Time to Do Inventory', weekly_avg_time],
+#     ['Monthly Avg. Time to Do Inventory', monthly_avg_time]
+# ]
 
-# Write the data to the sheet
-sheet.insert_rows(data, 1)
+# # Write the data to the sheet
+# sheet.insert_rows(data, 1)
