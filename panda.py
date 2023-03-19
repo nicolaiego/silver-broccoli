@@ -2,7 +2,7 @@ import csv
 from datetime import datetime, timedelta
 
 # Set path to CSV file
-csv_path = '/Users/nicoleregondi/Desktop/Glovo/inventory_data.csv'
+csv_path = '/inventory_data.csv'
 
 # Create dictionary to store inventory data
 inventory_data = {}
